@@ -1,0 +1,10 @@
+Enter a whole number, a space, and C or F. ie 100 F converts to Cels: 100 v
+Enter C or F, F converts to Cels: f
+100F converted is 37.8 C
+Enter yes to calulate another temp: yes
+Enter a whole number, a space, and C or F. ie 100 F converts to Cels: 212 f
+212F converted is 100.0 C
+Enter yes to calulate another temp: yes
+Enter a whole number, a space, and C or F. ie 100 F converts to Cels: 0 c
+0C converted is 32.0 F
+Enter yes to calulate another temp: no

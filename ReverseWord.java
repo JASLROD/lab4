@@ -18,25 +18,32 @@ public class ReverseWord{
         char firstLetter;
 
         //Create Scanner object to get input
-        Scanner keyboard = new Scanner (system.in);
+        Scanner keyboard = new Scanner (System.in);
 
         do{  ////optional do while.  Get main program up and running and then the do while
             System.out.print("Enter a series of words to test as palindromes, end with quit: ");
             word = keyboard.next().toLowerCase();
+
             while(!(word.equals("quit"))){
                 firstLetter = word.charAt(0);
-                remaining = word.string(1);
+                remaining = word.substring(1);
                 combined = remaining + firstLetter;
                 flipped="";
                 for(int i=combined.length()-1;i>=0;i--)
                 {
                     flipped+=combined.charAt(i); 
                 } 
-                if(word.equls(flipped)) /// Iam confused when it comes to having if else conditions with in a loop. Do I close thesewith brackets?
-                    System.out.println(word + "works");
+                if(word.equals(flipped)) /// Iam confused when it comes to having if else conditions with in a loop. Do I close thesewith brackets?
+                    System.out.println(word + " works");
                 else
-                    System.out.println(word + "does not work");
-                    word = keyboard.next().toLowerCase();
-            } ////end while, I follow your hints but minor errors prevent me from compiling. 
-        }///end main
-    }/// end class
+                {
+                    System.out.println(word + " does not work");
+
+                } word = keyboard.next().toLowerCase();
+                ////end else 
+            }System.out.println("Enter yes to process another line?");
+        }///end do 
+
+        while(keyboard.next().equalsIgnoreCase("yes"));
+    }///end main
+}/// end class

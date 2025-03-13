@@ -16,38 +16,32 @@ public class Temperature{
     public static void main (String[] args){
         ////variables
         int inputTemp; // temp entered by the user
-        int outputTemp; 
+        double outputTemp; 
         char inputUnit;
         //create Scanner object to read in keyboard
         Scanner keyboard = new Scanner(System.in);
 
-        do{ System.out.print("Enter msg to user something like, Enter a whole number, a space, and C or F” +  “ie 100 F converts to Cels: ");
+        do{ 
+            System.out.print("Enter a whole number, a space, and C or F. ie 100 F converts to Cels: ");
             inputTemp = keyboard.nextInt();
             inputUnit = keyboard.next().toUpperCase().charAt(0);
 
-            while(!(inputUnit=='C'|| inputUnit=='F'))
-
-            {
+            while(!(inputUnit=='C'|| inputUnit=='F')){
                 System.out.print("Enter C or F, F converts to Cels: ");
                 inputUnit = keyboard.next().toUpperCase().charAt(0);
             }
 
             //Operations
-            if (inputUnit=='F')
-            {
-                outputTemp = (inputTemp-32) * 5.0/9.0;
-                System.out.print("%d%c converted is %.1fC\n", inputTemp, inputUnit, outputTemp);
+            if (inputUnit=='F'){
+                outputTemp = (inputTemp-32) * 5.0 / 9.0;
+                System.out.printf("%d%c converted is %.1f C\n", inputTemp, inputUnit, outputTemp);
             }         
-            else
-            {
+            else{
                 outputTemp = inputTemp *9.0/5.0+32;
-                System.out.print("%d%c converted is %.1fF\n", inputTemp, inputUnit, outputTemp);
+                System.out.printf("%d%c converted is %.1f F\n", inputTemp, inputUnit, outputTemp);
 
-                System.out.print("Enter yes to calulate another temp: ");
             }
-
-            while(keyboard.next().equalsIgnoreCase("yes"));
-        }
-
+            System.out.print("Enter yes to calulate another temp: ");
+        }while(keyboard.next().equalsIgnoreCase("yes"));
     } //// end main ()
 } //// end class
