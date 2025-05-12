@@ -15,17 +15,19 @@ public class Stars{
         ////variables
         int width, line, spaces, stars;
         String temp;
-        
+
         //String temp for JOptionPane input
-        
+
         temp = JOptionPane.showInputDialog("Enter max width for stars ");//JOptionPane to get user input, something like "Enter max width for stars"
         width = Integer.parseInt(temp);//convert input string to int and set to width
-        
-        
-        //test to see if width is even (width%2==0).  If true increment width by 1.  Ensures width is an odd number
 
+        //test to see if width is even (width%2==0).  If true increment width by 1.  Ensures width is an odd number
+        if(width%2 ==0){
+            width++;
+        }
+        
         ////top half section
-        for (int line=1,spaces=width/2;line<=width/2+1;line++,spaces--){ ////how many lines should be based on width
+        for (int line = 1, spaces = width/2; line <=width/2 + 1; line++,spaces--){ ////how many lines should be based on width
             for (int i=1;i<=spaces;i++){  //this is for spaces
                 System.out.print(" ");
             }

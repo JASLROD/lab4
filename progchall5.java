@@ -12,15 +12,28 @@ public class progchall5
 {
     public static void main (String[] args){
     //variables
-    String stringone, letter;
-    int numbercharacter;
+    String input, temp, output;
+    char letter;
+    int letterAmount = 0;
     
     
-    stringone = JOptionPane.showInputDialog("Enter a String "); 
-    letter= JOptionPane.showInputDialog("Enter a char to be assesed ");
-    numcharacter = letter.trim();
+    //dialog box for input
+    temp  = JOptionPane.showInputDialog("Enter a String "); 
+    input = temp;
+    
+    temp = JOptionPane.showInputDialog("Enter a char to be assesed ");
+    letter = temp.trim().toLowerCase().charAt(0);
+   
+    
     //
+    for(int i= 0; i<=input.length()-1; i++){
+        if(input.charAt(i) == letter){
+            letterAmount++;
+        }
+    }
     
     
-    JOptionPane.showMessageDialog("In the phrase: "+ stringone\n +"There are "+ numbercharacter+" "+letter+"'s"));
+    //display output
+    JOptionPane.showMessageDialog(null, String.format ("In the phrase: %s \nThere are %d %c 's",input, letterAmount, letter));
+}
 }
