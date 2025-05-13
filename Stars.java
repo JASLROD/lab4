@@ -6,8 +6,8 @@ import javax.swing.JOptionPane;
  * will use for loop to create the star pattern
  * 
  * @author Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
- * @version v1.0
- * @since 3/4/2025
+ * @version v1.1
+ * @since 5/13/2025
  */
 
 public class Stars{ 
@@ -26,23 +26,23 @@ public class Stars{
             width++;
         }
         
-        ////top half section
-        for (int line = 1, spaces = width/2; line <=width/2 + 1; line++,spaces--){ ////how many lines should be based on width
+        ////top half 
+        for (line = 1, spaces = width/2; line <=width/2 + 1; line++,spaces--){ ////how many lines should be based on width
             for (int i=1;i<=spaces;i++){  //this is for spaces
                 System.out.print(" ");
             }
-            for (int stars=1;stars<=line*2-1;stars++){  //this is for stars
+            for (int i=1;i<=line*2-1;i++){  //this is for stars
                 System.out.print("*");
             }
             System.out.println("");  //this gets to next line
         }
 
         ////bottom half
-        for (line=width/2,spaces=1;line>0;line--,spaces++){  //opposite to the top half 
+        for (line= width/2,spaces=1;line>0;line--,spaces++){  //opposite to the top half 
             for (int i=1;i<=spaces;i++){  //this is for spaces
                 System.out.print(" ");
             }
-            for (stars=1;stars<=line*2-1;stars--){  //this is for stars
+            for (int i=1;i<=line*2-1;i++){  //this is for stars
                 System.out.print("*");
             }
             System.out.println("");  //this gets to next line

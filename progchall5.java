@@ -5,8 +5,8 @@ import javax.swing.JOptionPane;
  * need to create a loop to count the letters with in the string
  *
  * @author Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
- * @version v1.0
- * @since 3/9/2025
+ * @version v1.1
+ * @since 5/13/2025
  */
 public class progchall5
 {
